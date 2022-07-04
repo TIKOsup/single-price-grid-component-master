@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan: hsla(179, 62%, 43%, 80%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --font-size: 16px;
+    --font-karla: Karla, sans-serif;
+    --font-regular: 400;
+    --font-bold: 700;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-gray);
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--font-karla);
+    font-size: var(--font-size);
+    font-weight: var(--font-regular);
+    color: var(--white);
+}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 3rem 1.5rem;
+}
+
+.card {
+    border-radius: var(--border-radius);
+}
+
+section {
+    padding: 1rem;
+    width: 100%;
+}
+
+.heading {
+    font-size: 18px;
+    font-weight: var(--font-bold);
+    margin-bottom: 15px;
+}
+
+.community {
+    background-color: var(--white);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.community h1 {
+    color: var(--cyan);
+}
+
+.community p {
+    color: var(--grayish-blue);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.community .extra {
+    color: var(--bright-yellow);
+    font-weight: var(--font-bold);
+    margin-bottom: 15px;
+}
+
+.subscription {
+    background-color: var(--cyan);
+}
+
+.subscription-info {
+    margin-bottom: 2rem;
+}
+
+.price-per-month {
+    display: inline;
+    vertical-align: middle;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: var(--font-bold);
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--bright-yellow);
+    width: 100%;
+    padding: 15px;
+    font-weight: var(--font-bold);
+    font-size: var(--font-size);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--grayish-blue);
+}
+
+.why-us {
+    background-color: var(--light-cyan);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.why-us ul {
+    list-style: none;
+    opacity: 70%;
+    line-height: 1.5rem;
+}
+
+@media only screen and (min-width: 750px) {
+    main {
+        margin: 0;
+        height: 95vh;
+        justify-content: center;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 50%);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px; 
+    }
+
+    .community {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .subscription {
+        grid-area: 2 / 1 / 3 / 2;
+        border-radius: 0 0 0 var(--border-radius);
+    }
+
+    .why-us {
+        grid-area: 2 / 2 / 3 / 3;
+        border-radius: 0 0 var(--border-radius) 0 !important;
+    }
+
+    .card {
+        max-width: 750px;
+    }
+
+    section {
+        padding: 3rem !important;
+    }
+
+    .community h1 {
+        font-size: 20px;
+    }
+}
+
+.shadow-bot {
+    -webkit-box-shadow: 0px 5px 14px -5px rgba(0,0,0,0.5); 
+    box-shadow: 0px 5px 14px -5px rgba(0,0,0,0.5);
+}
+
+footer {
+    height: 5vh;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--grayish-blue);
+}
+.attribution a { 
+    color: var(--cyan);
+}
